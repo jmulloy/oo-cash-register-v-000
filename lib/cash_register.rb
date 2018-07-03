@@ -7,10 +7,8 @@ class CashRegister
     @discount = 20
   end
 
-  def add_item(item, price)
-    item = "eggs"
-    price = "0.98"
-  end
+
+
 
 
 
