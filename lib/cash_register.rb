@@ -1,14 +1,17 @@
 class CashRegister
 
-  attr_accessor :discount, :total, :items
+  attr_accessor :discount, :total, :items, :old_total, :old_items
 
   def initialize( discount=0)
     @total = 0
     @discount = discount
     @items = []
+
   end
 
   def add_item(item, price, quantity = 1)
+    @old_total = @total
+    @old_items = @items
     self.total += price * quantity
     new_items = Array.new(quantity, item)
     @items.concat(new_items)
@@ -23,5 +26,9 @@ class CashRegister
     end
   end
 
+  def void_last_transaction
+    @total = @old_total
+    @items = @old_items
+  end
 
 end
