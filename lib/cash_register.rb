@@ -8,7 +8,9 @@ class CashRegister
   end
 
   def add_item(item, price)
-    
+    item = "eggs"
+    price = "0.98"
+  end
 
 
 
