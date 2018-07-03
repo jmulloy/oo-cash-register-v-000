@@ -4,6 +4,7 @@ class CashRegister
 
   def initialize
     @total = 0
+    @employee_dicount = 0
   end
 
 end
